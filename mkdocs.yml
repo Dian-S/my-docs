@@ -14,4 +14,5 @@ theme:
 # 目录结构配置
 nav:
   - 首页: index.md
+    - 二级目录: content.md
   - 内容: content.md
