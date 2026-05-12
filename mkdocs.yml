@@ -14,4 +14,4 @@ theme:
 # 目录结构配置
 nav:
   - 首页: index.md
-  - 指南: index.md
+  - 内容: content.md
