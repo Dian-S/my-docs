@@ -18,4 +18,6 @@ nav:
     - 二级目录: content.md
     - 二级目录2: content2.md
   - application:
+    - 二级目录: content.md
   - technical guides:
+    - 二级目录: content.md
