@@ -13,7 +13,9 @@ theme:
 
 # 目录结构配置
 nav:
-  - 首页: index.md
-  - 一级目录:
+  - overview: index.md
+  - data:
     - 二级目录: content.md
     - 二级目录2: content2.md
+  - application:
+  - technical guides:
