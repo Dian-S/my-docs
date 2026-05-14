@@ -16,8 +16,8 @@ nav:
   - overview: index.md
   - data:
     - data1: content.md
-    - data2: content.md
+    - data2: content2.md
   - application:
-    - application1: content.md
+    - application1: application1.md
   - technical guides:
-    - technical-guide1: content.md
+    - technical-guide1: technical-guide1.md
