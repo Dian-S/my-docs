@@ -15,9 +15,9 @@ theme:
 nav:
   - overview: index.md
   - data:
-    - 二级目录: content.md
-    - 二级目录2: content2.md
+    - data1: content.md
+    - data2: content.md
   - application:
-    - 二级目录: content.md
+    - application1: content.md
   - technical guides:
-    - 二级目录: content.md
+    - technical-guide1: content.md
