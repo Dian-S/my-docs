@@ -13,7 +13,8 @@ theme:
 
 # 目录结构配置
 nav:
-  - overview: index.md
+  - overview:
+    - documentation overview: index.md
   - data:
     - data1: content.md
     - data2: content2.md
