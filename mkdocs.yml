@@ -13,12 +13,8 @@ theme:
 
 # 目录结构配置
 nav:
-  - overview:
-    - documentation overview: index.md
-  - data:
-    - data1: content.md
-    - data2: content2.md
-  - application:
-    - application1: application1.md
-  - technical guides:
-    - technical-guide1: technical-guide1.md
+  - Overview: overview.md
+  - Data: data_structure.md
+  - Download & Usage: download_usage.md
+  - Article context: article_context.md
+  - Citation: citation.md
