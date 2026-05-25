@@ -15,6 +15,7 @@ theme:
 nav:
   - Overview: overview.md
   - Data: data_structure.md
+  - Workflow: bodipy_sam_workflow.md
   - Download & Usage: download_usage.md
   - Article context: article_context.md
   - Citation: citation.md
