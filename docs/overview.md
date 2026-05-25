@@ -10,19 +10,20 @@ The dataset contains images from an `apoc2`-deficient zebrafish hypertriglycerid
 
 The current ZF_APOC2 collection is organized into two top-level sections:
 
-- `模型`: images related to Apoc2 model construction, phenotype validation, staining experiments, and rescue/positive-control experiments.
-- `筛药`: TIFF images related to drug-screening experiments.
+- `model`: images related to Apoc2 model construction, phenotype validation, staining experiments, and rescue/positive-control experiments.
+- `drug_screen`: TIFF images related to drug-screening experiments.
 
 Current dataset summary:
 
 | Dataset section | Files | Approx. size | Main content |
 |---|---:|---:|---|
-| `模型/bodipy` | 269 | 114 MB | BODIPY staining images |
-| `模型/光镜` | 189 | 44 MB | Brightfield phenotype images |
-| `模型/油红O` | 304 | 44 MB | Oil Red O staining images |
-| `筛药` | 1,116 | 667 MB | Drug-screening TIFF images |
+| `model/bodipy` | 269 | 114 MB | BODIPY staining images |
+| `model/brightfield` | 189 | 44 MB | Brightfield phenotype images |
+| `model/oil_red_o` | 304 | 44 MB | Oil Red O staining images |
+| `drug_screen` | 1,116 | 667 MB | Drug-screening TIFF images |
 
 A complete folder-level summary is available in [Data Structure](data_structure.md).
+An example BODIPY analysis workflow is available in [BODIPY SAM Intensity Workflow](bodipy_sam_workflow.md).
 
 ## Downloading from ZF_APOC2
 
@@ -48,11 +49,11 @@ More article-specific context is summarized in [Article Context and Dataset Mapp
 
 ## Contributing to ZF_APOC2
 
-Before public release, the existing `metadata/metadata.xlsx` workbook should be expanded with experiment-level fields. It already contains one row per image and can serve as the public image inventory.
+Before public release, the existing `metadata/metadata_english.xlsx` workbook should be expanded with experiment-level fields. It already contains one row per image and can serve as the public image inventory.
 
 Suggested public metadata:
 
-- `metadata/metadata.xlsx`: one row per image in the `images` sheet.
+- `metadata/metadata_english.xlsx`: one row per image in the `images` sheet.
 - optional experiment-level sheet: one row per experiment folder or batch.
 
 Recommended metadata fields include relative file path, assay type, experiment date, developmental stage, genotype/model group, treatment, dose, replicate number, and the corresponding article experiment or figure panel when available.

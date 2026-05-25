@@ -58,7 +58,7 @@ to identify small-molecule therapeutic candidates.
 
 | Dataset folder | Likely article-related content | Notes |
 |---|---|---|
-| `模型/bodipy` | BODIPY staining for model validation, stage comparison, overexpression rescue, and positive-drug experiments | Folder names include 3dpf, 4dpf, 6dpf, APOC2 overexpression, positive drug, and GEMF-like labels |
-| `模型/油红O` | Oil Red O staining for neutral lipid deposition and drug-response validation | Folder names include 5dpf/6dpf and treatment labels |
-| `模型/光镜` | Brightfield phenotype comparison, including swim bladder appearance and rescue observations | Folder names include developmental stages and overexpression rescue |
-| `筛药` | BODIPY-based drug screening image batches | Folder names and filenames indicate TIFF screening images, controls, APOC2 mutant groups, and compound/dose labels |
+| `model/bodipy` | BODIPY staining for model validation, stage comparison, overexpression rescue, and positive-drug experiments | Folder names include 3dpf, 4dpf, 6dpf, APOC2 overexpression, positive drug, and GEMF-like labels |
+| `model/oil_red_o` | Oil Red O staining for neutral lipid deposition and drug-response validation | Folder names include 5dpf/6dpf and treatment labels |
+| `model/brightfield` | Brightfield phenotype comparison, including swim bladder appearance and rescue observations | Folder names include developmental stages and overexpression rescue |
+| `drug_screen` | BODIPY-based drug screening image batches | Folder names and filenames indicate TIFF screening images, controls, APOC2 mutant groups, and compound/dose labels |

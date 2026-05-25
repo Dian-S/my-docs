@@ -3,7 +3,7 @@
 The current metadata file is:
 
 ```text
-metadata/metadata.xlsx
+metadata/metadata_english.xlsx
 ```
 
 This workbook contains one sheet, `images`, with 1,878 rows. Each row represents
@@ -12,6 +12,7 @@ documentation:
 
 - source computer absolute paths were removed
 - dataset-relative paths are used instead
+- dataset-relative paths and filenames are English/ASCII-safe for public hosting
 - a stable `image_id` column was added
 - the previously missing path for `apoc2mutant- (1).JPG` was corrected
 
@@ -32,4 +33,3 @@ documentation:
 | `object_type` | Object type, currently zebrafish |
 | `dataset_description` | Section-level description text |
 | `metadata_issue` | Flags rows that need manual correction |
-

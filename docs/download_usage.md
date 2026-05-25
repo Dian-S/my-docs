@@ -15,8 +15,11 @@ Planned structure:
 
 ```text
 ZF_APOC2/
-├── 模型/
-└── 筛药/
+├── model/
+│   ├── bodipy/
+│   ├── brightfield/
+│   └── oil_red_o/
+└── drug_screen/
 ```
 
 ## AWS S3 Access
