@@ -50,3 +50,6 @@ nav:
       - Data: TPEN_data_structure.md
       - Metadata: TPEN_metadata_plan.md
       - Workflow: TPEN_hsc_counting_workflow.md
+      - Download & Usage: TPEN_download_usage.md
+      - Article context: TPEN_article_context.md
+      - Citation: TPEN_citation.md
