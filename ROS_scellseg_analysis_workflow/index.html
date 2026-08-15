@@ -1,0 +1,2378 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ROS_metadata_plan/">
+      
+      
+        <link rel="next" href="../ROS_tools_README/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Workflow - Dataset Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scellseg-single-worm-analysis-workflow" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Dataset Documentation" class="md-header__button md-logo" aria-label="Dataset Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dataset Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ZF_APOC2_overview/" class="md-tabs__link">
+          
+  
+  
+  ZF_APOC2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../COL12_overview/" class="md-tabs__link">
+          
+  
+  
+  COL12
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ROS_overview/" class="md-tabs__link">
+          
+  
+  
+  ROS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../DOX_overview/" class="md-tabs__link">
+          
+  
+  
+  DOX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../TPEN_overview/" class="md-tabs__link">
+          
+  
+  
+  TPEN
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dataset Documentation" class="md-nav__button md-logo" aria-label="Dataset Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Dataset Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZF_APOC2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ZF_APOC2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZF_APOC2_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZF_APOC2_data_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZF_APOC2_bodipy_sam_workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZF_APOC2_download_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZF_APOC2_article_context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Article context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZF_APOC2_citation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COL12
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    COL12
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_data_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_metadata_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_screening_workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_download_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_article_context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Article context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COL12_citation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ROS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_data_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_metadata_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytical role
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing stages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processing stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-query-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Query preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instance-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Instance segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representative-segmentation-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representative segmentation output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-individual-worm-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Individual-worm extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-8-bit-conversion-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 8-bit conversion and measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaged-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packaged software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected output inventory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducibility-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducibility gaps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation-and-licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation and licence
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_tools_README/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools README
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_download_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_article_context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Article context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS_citation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DOX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DOX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_data_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_metadata_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_cardiac_analysis_workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_download_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_article_context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Article context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DOX_citation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TPEN
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TPEN
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_data_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_metadata_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_hsc_counting_workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_download_usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download & Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_article_context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Article context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TPEN_citation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose and scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytical role
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing stages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processing stages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-query-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Query preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-instance-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Instance segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representative-segmentation-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representative segmentation output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-individual-worm-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Individual-worm extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-8-bit-conversion-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 8-bit conversion and measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaged-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packaged software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected output inventory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducibility-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducibility gaps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation-and-licence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation and licence
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="scellseg-single-worm-analysis-workflow">Scellseg single-worm analysis workflow</h1>
+<h2 id="purpose-and-scope">Purpose and scope</h2>
+<p>This workflow describes the conversion of whole-well <code>w1</code> fluorescence images
+into segmented worm instances, individual-worm crops, and ImageJ-style
+measurement tables. It is limited to the screening-image work package;
+presentation composites and statistical plotting files are not inputs.</p>
+<p>The archived directory layout establishes the processing stages and output
+counts. It does not establish the exact project model weights, segmentation
+parameters, manual corrections, 8-bit conversion rule, or ImageJ macro. These
+items remain explicit unknowns.</p>
+<h2 id="analytical-role">Analytical role</h2>
+<p>The plate acquisitions contain two reporter channels, but the verified
+Scellseg query and instance directories use <code>w1</code> only. In the image archive,
+<code>w1</code> is assigned to FITC/GFP and <code>w2</code> to DAPI/Violet. Segmentation therefore
+defines worm instances from <code>w1</code>; the available instance outputs alone cannot
+reconstruct a paired <code>YFP500/YFP420</code> measurement.</p>
+<h2 id="inputs">Inputs</h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Observed specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Query images</td>
+<td>702 TIFF files across eight batches</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td><code>w1</code>, FITC/GFP</td>
+</tr>
+<tr>
+<td>Image size</td>
+<td>2007 × 2007 pixels</td>
+</tr>
+<tr>
+<td>Bit depth</td>
+<td>16-bit</td>
+</tr>
+<tr>
+<td>Naming</td>
+<td><code>*_w1_img.tif</code></td>
+</tr>
+<tr>
+<td>Metadata source</td>
+<td><a href="../metadata/ROS_metadata.xlsx"><code>metadata/metadata.xlsx</code></a>, <code>images</code> sheet</td>
+</tr>
+</tbody>
+</table>
+<p>The query directories appear to contain processing copies of raw <code>w1</code> files.
+One checked pair was byte-identical, but all pairs should be checksum-verified
+before deduplication.</p>
+<h2 id="workflow-overview">Workflow overview</h2>
+<pre><code class="language-mermaid">flowchart TD
+    A[&quot;Raw whole-well w1 TIFF&quot;] --&gt; B[&quot;Query manifest and eight query batches&quot;]
+    B --&gt; C[&quot;Scellseg instance segmentation&quot;]
+    C --&gt; D[&quot;Instance mask PNG&quot;]
+    C --&gt; E[&quot;Segmentation preview PNG&quot;]
+    C --&gt; F[&quot;Segmentation NPY and outline TXT&quot;]
+    C --&gt; G[&quot;16-bit 512 × 512 individual-worm TIFF&quot;]
+    G --&gt; H[&quot;8-bit 512 × 512 TIFF&quot;]
+    H --&gt; I[&quot;ImageJ-style Results.xls&quot;]
+</code></pre>
+<h2 id="processing-stages">Processing stages</h2>
+<h3 id="1-query-preparation">1. Query preparation</h3>
+<p>Select <code>w1</code> TIFF rows from the filename channel token that belong to a raw-data
+path, are not already inside the single-worm tree, and contain plate and well
+identifiers. Preserve plate assignment in <code>query-1</code> through <code>query-8</code>.</p>
+<p>The packaged preparation script defaults to <code>manifest</code> mode, which records the
+mapping without copying data. <code>copy</code> and <code>symlink</code> modes are available when a
+separate processing tree is required.</p>
+<h3 id="2-instance-segmentation">2. Instance segmentation</h3>
+<p>Scellseg creates a labelled mask and preview for each query image. The observed
+file conventions are:</p>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th style="text-align: right;">Files</th>
+<th>Observed role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*_cp_masks.png</code></td>
+<td style="text-align: right;">702</td>
+<td>2007 × 2007 instance-mask image</td>
+</tr>
+<tr>
+<td><code>*_cp_output.png</code></td>
+<td style="text-align: right;">702</td>
+<td>3600 × 900 segmentation preview</td>
+</tr>
+<tr>
+<td><code>*_seg.npy</code></td>
+<td style="text-align: right;">702</td>
+<td>segmentation array</td>
+</tr>
+<tr>
+<td><code>*_cp_outlines.txt</code></td>
+<td style="text-align: right;">702</td>
+<td>instance outlines</td>
+</tr>
+</tbody>
+</table>
+<p>The project model weights are currently missing and need to be obtained from
+the algorithm owner. The upstream documentation's generic weights and default
+thresholds must not be presented as the settings used for these images.</p>
+<h3 id="representative-segmentation-output">Representative segmentation output</h3>
+<p>The following archived preview shows one representative whole-well result.
+From left to right, the panels contain the input fluorescence image, predicted
+instance outlines, colour-coded predicted masks, and the predicted cell-pose
+field. The preview is displayed as supplied and is not a newly generated
+analysis result.</p>
+<p><img alt="Representative Scellseg segmentation preview" src="../assets/scellseg_examples/representative_segmentation_preview.png" /></p>
+<p>The corresponding processing tree also contains one TIFF crop for each
+retained instance. The example below is an 8-bit display derivative for one
+predicted worm. It was converted from the archived TIFF to PNG only for browser
+display; the spatial content was not altered.</p>
+<p><img alt="Representative segmented single-worm output" src="../assets/scellseg_examples/representative_single_worm_8bit.png" /></p>
+<h3 id="3-individual-worm-extraction">3. Individual-worm extraction</h3>
+<p>The eight <code>single-*</code> directories contain 4,878 instance-labelled, 16-bit TIFF
+files at 512 × 512 pixels. No confirmed command describes crop centring,
+padding, edge handling, or instance exclusion. Preserve these files as the
+intensity-retaining derivative.</p>
+<h3 id="4-8-bit-conversion-and-measurement">4. 8-bit conversion and measurement</h3>
+<p>The eight <code>output-*</code> directories contain 4,878 corresponding 8-bit TIFF files
+at 512 × 512 pixels. A sampled <code>single</code>/<code>output</code> pair was not byte-identical.
+Each output directory also contains a tab-delimited text file named
+<code>Results.xls</code>, with fields including <code>Area</code>, <code>Mean</code>, <code>Min</code>, <code>Max</code>, <code>IntDen</code>,
+<code>RawIntDen</code>, <code>MinThr</code>, and <code>MaxThr</code>.</p>
+<p>The ImageJ version, macro, threshold settings, and 16-to-8-bit conversion rule
+must be recovered before quantitative measurements are exactly reproducible.</p>
+<h2 id="packaged-software">Packaged software</h2>
+<p>The <code>scellseg_analysis/</code> directory contains:</p>
+<ul>
+<li>Scellseg source code, GUI assets, examples, and upstream licence files;</li>
+<li>the exact upstream source revision recorded in <code>SOURCE_VERSION.txt</code>;</li>
+<li>a configuration template that retains unknown values as <code>null</code>;</li>
+<li>scripts for query-manifest generation, GUI launch, and output auditing; and</li>
+<li>Conda and pip environment definitions.</li>
+</ul>
+<p>The abbreviated commit <code>84fe158…</code> is a Git source-version identifier. It makes
+the packaged source snapshot unambiguous if the online repository later
+changes; it is not evidence that the same revision was used in the original
+analysis. Model-weight binaries are not included and are marked as pending.</p>
+<h2 id="setup">Setup</h2>
+<pre><code class="language-bash">cd scellseg_analysis
+conda env create -f environment.yml
+conda activate celegans-scellseg
+</code></pre>
+<p>The environment follows the upstream Python 3.7.4 reference line. GPU and CUDA
+versions should be adapted to the execution host; they are unknown for the
+original run.</p>
+<h2 id="commands">Commands</h2>
+<p>Create and inspect a query mapping without copying images:</p>
+<pre><code class="language-bash">python scripts/prepare_query_inputs.py \
+  --metadata ../metadata/metadata.xlsx \
+  --dataset-root /path/to/C_elegans_ROS_Dataset \
+  --output-root /path/to/scellseg_work \
+  --mode manifest
+</code></pre>
+<p>After reviewing the manifest, use <code>copy</code> or <code>symlink</code> mode if the query tree
+should be materialized. Existing destinations are not replaced unless
+<code>--overwrite</code> is supplied.</p>
+<p>After the confirmed model weights and parameters are added, launch the GUI:</p>
+<pre><code class="language-bash">bash scripts/run_scellseg_gui.sh
+</code></pre>
+<p>Running with an arbitrary upstream model is a new analysis, not a reproduction
+of the archived output.</p>
+<p>Audit an existing processing tree:</p>
+<pre><code class="language-bash">python scripts/audit_scellseg_outputs.py \
+  --root /path/to/single_worm_data_7.8 \
+  --json-out scellseg_output_audit.json
+</code></pre>
+<h2 id="expected-output-inventory">Expected output inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Processing image group</th>
+<th style="text-align: right;">Images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Query TIFF inputs</td>
+<td style="text-align: right;">702</td>
+</tr>
+<tr>
+<td>Mask PNGs</td>
+<td style="text-align: right;">702</td>
+</tr>
+<tr>
+<td>Preview PNGs</td>
+<td style="text-align: right;">702</td>
+</tr>
+<tr>
+<td><code>single-*</code> 16-bit TIFFs</td>
+<td style="text-align: right;">4,878</td>
+</tr>
+<tr>
+<td><code>output-*</code> 8-bit TIFFs</td>
+<td style="text-align: right;">4,878</td>
+</tr>
+<tr>
+<td><strong>TIFF and PNG total</strong></td>
+<td style="text-align: right;"><strong>11,862</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The supplied descriptive count is 4,886 isolated worms, while both instance
+directories contain 4,878 TIFFs. The eight-instance difference must be resolved
+against the original processing log; the audit script reports filesystem
+counts without silently correcting them.</p>
+<h2 id="quality-control">Quality control</h2>
+<ul>
+<li>Review masks and previews for merged worms, fragments, debris, empty
+  instances, and edge truncation.</li>
+<li>Retain the link from plate and well to query image, mask, preview, and
+  numbered instance crop.</li>
+<li>Verify query/raw pairs by checksum before eliminating processing copies.</li>
+<li>Keep 16-bit and 8-bit derivatives as distinct processing stages.</li>
+<li>Do not infer <code>w2</code> measurements or a paired-channel ratio from <code>w1</code>-only
+  instance images.</li>
+<li>Record exclusions and manual corrections at instance level.</li>
+</ul>
+<h2 id="reproducibility-gaps">Reproducibility gaps</h2>
+<p>Exact end-to-end reproduction still requires:</p>
+<ul>
+<li>the project model weights and whether they were pretrained or fine-tuned;</li>
+<li>the Scellseg version actually used;</li>
+<li>cell diameter, model-match threshold, cell-probability threshold, channel
+  settings, device, and batch parameters;</li>
+<li>fine-tuning images, masks, data split, and training settings, if applicable;</li>
+<li>crop-generation and instance-exclusion rules;</li>
+<li>the 8-bit conversion rule; and</li>
+<li>the ImageJ version, macro, thresholds, measurements, and QC rules.</li>
+</ul>
+<p>These unknowns are represented as <code>null</code> or <code>unknown</code> in
+<code>configs/scellseg_workflow_config.yaml</code> so later confirmations can be added
+without rewriting the workflow.</p>
+<h2 id="citation-and-licence">Citation and licence</h2>
+<p>Use of software-derived images should cite both the dataset and Scellseg:</p>
+<blockquote>
+<p>Xun D, Chen D, Zhou Y, Lauschke VM, Wang R, Wang Y. Scellseg: a style-aware
+deep learning tool for adaptive cell instance segmentation by contrastive
+fine-tuning. <em>iScience</em>. 2022;25:105506.
+https://doi.org/10.1016/j.isci.2022.105506</p>
+</blockquote>
+<p>See <code>scellseg_analysis/THIRD_PARTY_NOTICES.md</code> and the upstream licence files
+before redistribution.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
