@@ -1,4 +1,4 @@
-site_name: ZF_APOC2 Dataset Documentation
+site_name: Dataset Documentation
 theme:
   name: material
   language: zh  # 设置中文
@@ -13,7 +13,7 @@ theme:
 
 # 目录结构配置
 nav:
-  - Documentation:
+  - ZF_APOC2:
       - Overview: overview.md
       - Data: data_structure.md
       - Workflow: bodipy_sam_workflow.md
