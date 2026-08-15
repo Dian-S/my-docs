@@ -22,14 +22,14 @@ Current dataset summary:
 | `model/oil_red_o` | 304 | 44 MB | Oil Red O staining images |
 | `drug_screen` | 1,116 | 667 MB | Drug-screening TIFF images |
 
-A complete folder-level summary is available in [Data Structure](data_structure.md).
-An example BODIPY analysis workflow is available in [BODIPY SAM Intensity Workflow](bodipy_sam_workflow.md).
+A complete folder-level summary is available in [Data Structure](ZF_APOC2_data_structure.md).
+An example BODIPY analysis workflow is available in [BODIPY SAM Intensity Workflow](ZF_APOC2_bodipy_sam_workflow.md).
 
 ## Downloading from ZF_APOC2
 
-See [Data Structure](data_structure.md) for a description of data organization in the ZF_APOC2 dataset.
+See [Data Structure](ZF_APOC2_data_structure.md) for a description of data organization in the ZF_APOC2 dataset.
 
-Detailed instructions for browsing and downloading the dataset will be provided in [Download and Usage Instructions](download_usage.md).
+Detailed instructions for browsing and downloading the dataset will be provided in [Download and Usage Instructions](ZF_APOC2_download_usage.md).
 ## Experimental protocol versions
 
 The dataset corresponds to the 2025 *Biochemical Pharmacology* article by Li, Qi, Wu, Shen, and Zhao.
@@ -45,7 +45,7 @@ Key experimental context:
 - Main validated hit: paeoniflorin (PAE).
 - Proposed mechanism: HNF4A/PPARA/LDLR signaling, triglyceride-rich lipoprotein clearance, beta-oxidation, and lipophagy.
 
-More article-specific context is summarized in [Article Context and Dataset Mapping](article_context.md).
+More article-specific context is summarized in [Article Context and Dataset Mapping](ZF_APOC2_article_context.md).
 
 ## Contributing to ZF_APOC2
 
@@ -58,7 +58,7 @@ Suggested public metadata:
 
 Recommended metadata fields include relative file path, assay type, experiment date, developmental stage, genotype/model group, treatment, dose, replicate number, and the corresponding article experiment or figure panel when available.
 
-See [Metadata](metadata_plan.md) for the current fields and recommended additions.
+See [Metadata](ZF_APOC2_metadata_plan.md) for the current fields and recommended additions.
 
 ## Complementary datasets
 

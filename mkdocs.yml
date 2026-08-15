@@ -14,9 +14,17 @@ theme:
 # 目录结构配置
 nav:
   - ZF_APOC2:
-      - Overview: overview.md
-      - Data: data_structure.md
-      - Workflow: bodipy_sam_workflow.md
-      - Download & Usage: download_usage.md
-      - Article context: article_context.md
-      - Citation: citation.md
+      - Overview: ZF_APOC2_overview.md
+      - Data: ZF_APOC2_data_structure.md
+      - Workflow: ZF_APOC2_bodipy_sam_workflow.md
+      - Download & Usage: ZF_APOC2_download_usage.md
+      - Article context: ZF_APOC2_article_context.md
+      - Citation: ZF_APOC2_citation.md
+  - COL12:
+      - Overview: COL12_overview.md
+      - Data: COL12_data_structure.md
+      - Metadata: COL12_metadata_plan.md
+      - Workflow: COL12_screening_workflow.md
+      - Download & Usage: COL12_download_usage.md
+      - Article context: COL12_article_context.md
+      - Citation: COL12_citation.md
