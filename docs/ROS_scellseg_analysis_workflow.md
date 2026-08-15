@@ -29,7 +29,7 @@ reconstruct a paired `YFP500/YFP420` measurement.
 | Image size | 2007 × 2007 pixels |
 | Bit depth | 16-bit |
 | Naming | `*_w1_img.tif` |
-| Metadata source | `metadata/metadata.xlsx`, `images` sheet |
+| Metadata source | [`metadata/metadata.xlsx`](metadata/ROS_metadata.xlsx), `images` sheet |
 
 The query directories appear to contain processing copies of raw `w1` files.
 One checked pair was byte-identical, but all pairs should be checksum-verified

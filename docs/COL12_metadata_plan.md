@@ -2,9 +2,7 @@
 
 ## Delivered workbook
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/COL12_metadata.xlsx)
 
 The workbook contains one `images` sheet with 13,933 records and 30 fields.
 The intended screening-image release contains 13,931 TIFF records.

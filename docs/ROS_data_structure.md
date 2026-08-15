@@ -20,6 +20,8 @@ C_elegans_ROS_Dataset/
     └── L6000-Natural_Compound_Library-to_Ni_Ai.xlsx
 ```
 
+Metadata download: [`metadata/metadata.xlsx`](metadata/ROS_metadata.xlsx).
+
 ## Image inventory
 
 | Image class | TIFF | PNG | Total |

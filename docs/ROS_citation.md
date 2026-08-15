@@ -15,7 +15,7 @@ Dataset (Version <version>). <Repository>. <Dataset DOI>.
 ```
 
 When citing an individual image, include its `CE_ROS_SCREEN_######` identifier
-and `relative_path` from `metadata/metadata.xlsx`.
+and `relative_path` from [`metadata/metadata.xlsx`](metadata/ROS_metadata.xlsx).
 
 ## BibTeX draft
 

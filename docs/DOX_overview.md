@@ -48,7 +48,7 @@ Current dataset summary:
 | `Tanshinone` | 118 | 5.48 GiB | Named-compound imaging |
 | `Ganoderma` | 3 | 0.10 GiB | Named-compound imaging |
 | Other date/date-time experiment batches | 2,879 | 157.48 GiB | Per-experiment control, model, and treatment groups from DIC, screening, validation, inhibitor, ROS, and follow-up studies |
-| **Curated database total** | **3,329** | **222.12 GiB** | TIFF, TIF, and SIF imaging files represented in `metadata/metadata.xlsx` |
+| **Curated database total** | **3,329** | **222.12 GiB** | TIFF, TIF, and SIF imaging files represented in [`metadata/metadata.xlsx`](metadata/DOX_metadata.xlsx) |
 
 The 98 excluded source-archive files comprise 31 display images, 27
 statistical or derived outputs, 2 dead-specimen files, 5 unresolved `Z` files,
@@ -95,13 +95,13 @@ Mapping](DOX_article_context.md).
 
 ## Contributing to the dataset
 
-The workbook `metadata/metadata.xlsx` is the file manifest for the curated
+The workbook [`metadata/metadata.xlsx`](metadata/DOX_metadata.xlsx) is the file manifest for the curated
 database and contains one row per included imaging file. Original relative
 paths and filenames are retained, while confirmed naming conventions and
 treatment-code interpretations are documented without adding unverified
 experimental-purpose assignments.
 
-The companion workbook `metadata/compound_plate_map.xlsx` maps numbered
+The companion workbook [`metadata/compound_plate_map.xlsx`](metadata/DOX_compound_plate_map.xlsx) maps numbered
 screening compounds to English names, retained Chinese source names, CAS
 numbers, and mapping status. It is used together with numbered filenames such
 as `350-1.tiff`.

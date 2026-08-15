@@ -77,7 +77,7 @@ to the published candidates.
 The publication supports the experimental design and compound-level screening
 interpretation. The image counts, paths, bit depths, resolutions, channel
 assignments, and processing groups are derived from the verified data archive
-and `metadata/metadata.xlsx`. Compound identities are joined from the supplied
+and [`metadata/metadata.xlsx`](metadata/COL12_metadata.xlsx). Compound identities are joined from the supplied
 L6000 workbook only when the available plate-and-well evidence supports them.
 
 The final normalized measurement is not contained in the image metadata.

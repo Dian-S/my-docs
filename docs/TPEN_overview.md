@@ -60,7 +60,7 @@ All 1,219 records are grayscale zebrafish fluorescence images annotated as FITC-
 
 ## Metadata resources
 
-- `metadata/metadata.xlsx`: one row per image, using English metadata values and dataset-relative paths.
-- `metadata/TPEN_compound_reference.xlsx`: compound-number lookup and screening filename legend. English treatment names are primary; Chinese names are retained only as supplementary cross-references where useful.
+- [`metadata/metadata.xlsx`](metadata/TPEN_metadata.xlsx): one row per image, using English metadata values and dataset-relative paths.
+- [`metadata/TPEN_compound_reference.xlsx`](metadata/TPEN_compound_reference.xlsx): compound-number lookup and screening filename legend. English treatment names are primary; Chinese names are retained only as supplementary cross-references where useful.
 
 The absence of a numeric compound identifier is not treated as an error when the treatment is identifiable by name. Examples include Ginsenoside Rb1, Senkyunolide I, Rosmarinic acid, Guanxinning, and the zinc rescue control.

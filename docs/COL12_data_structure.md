@@ -24,6 +24,8 @@ source tree retains acquisition-date, plate-group, complement, supplement,
 `input`, `output`, and `single_missingoutput` directory names. Keep
 `relative_path` unchanged until a migration manifest is generated.
 
+Metadata download: [`metadata/metadata.xlsx`](metadata/COL12_metadata.xlsx).
+
 ## Image inventory
 
 | Image class | Images | Resolution | Bit depth |
@@ -79,4 +81,3 @@ supplied L6000 workbook. Control positions are preserved separately. The
 complement/re-array acquisition label is not treated as an original L6000
 plate; those wells remain unresolved unless independent candidate-list
 evidence exists.
-

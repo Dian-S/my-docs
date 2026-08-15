@@ -39,9 +39,7 @@ Typical input:
 
 Metadata file:
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/DOX_metadata.xlsx)
 
 The metadata workbook contains one row per imaging file retained in the
 curated database. A recording used for cardiac analysis is normally a

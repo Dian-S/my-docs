@@ -40,7 +40,7 @@ before public release.
 
 ## Metadata and compound annotation
 
-`metadata/metadata.xlsx` currently contains 13,273 rows. The two
+[`metadata/metadata.xlsx`](metadata/ROS_metadata.xlsx) currently contains 13,273 rows. The two
 `plate_well_status=final_figure` rows are designated for later removal, leaving
 13,271 released image records. The workbook provides stable image IDs,
 relative paths, image properties, plate/well identifiers, and compound

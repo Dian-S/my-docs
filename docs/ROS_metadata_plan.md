@@ -2,9 +2,7 @@
 
 ## Delivered workbook
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/ROS_metadata.xlsx)
 
 The current workbook contains one `images` sheet with 13,273 records and 20
 fields. The intended image-only release contains 13,271 records. The two

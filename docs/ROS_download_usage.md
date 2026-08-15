@@ -6,9 +6,7 @@ replace it with the final public prefix when the package is deposited.
 
 ## Metadata workbook
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/ROS_metadata.xlsx)
 
 The current `images` sheet contains 13,273 records. For the image-only release,
 filter out the two records with `plate_well_status=final_figure`, leaving

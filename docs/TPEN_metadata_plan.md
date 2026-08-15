@@ -2,9 +2,7 @@
 
 The current image-level metadata file is:
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/TPEN_metadata.xlsx)
 
 The workbook contains one sheet, `Sheet1`, with 1,219 data rows. Each row represents one zebrafish drug-screening image. 
 
@@ -43,9 +41,7 @@ The workbook contains one sheet, `Sheet1`, with 1,219 data rows. Each row repres
 
 The treatment lookup file is:
 
-```text
-metadata/TPEN_compound_reference.xlsx
-```
+[`metadata/TPEN_compound_reference.xlsx`](metadata/TPEN_compound_reference.xlsx)
 
 It contains three sheets:
 
@@ -84,4 +80,3 @@ The current 13-column workbook is a complete image inventory, but future release
 | `TPEN_concentration_uM` | TPEN concentration; reported as 150 uM for the primary screen |
 | `source_publication` | Article or DOI associated with the screening dataset |
 | `source_image_id` | Link between an SIF source image and any TIFF-derived representation, if confirmed |
-

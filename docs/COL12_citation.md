@@ -8,7 +8,7 @@ Dataset (Version <version>). <Repository>. <Dataset DOI>.
 ```
 
 When citing an individual image, include its `CE_COL12_SCREEN_######`
-identifier and `relative_path` from `metadata/metadata.xlsx`.
+identifier and `relative_path` from [`metadata/metadata.xlsx`](metadata/COL12_metadata.xlsx).
 
 ## BibTeX draft
 

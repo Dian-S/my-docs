@@ -72,11 +72,13 @@ Filenames encode treatment and replicate information but are not fully standardi
 - Zinc rescue label `ZN`.
 - Abbreviated or medicine labels, including `I`, `GXN`, and `RB1`.
 
-The separate `metadata/TPEN_compound_reference.xlsx` workbook normalizes these filename labels. Missing numeric identifiers are acceptable when a treatment can be resolved by name.
+The separate [`metadata/TPEN_compound_reference.xlsx`](metadata/TPEN_compound_reference.xlsx) workbook normalizes these filename labels. Missing numeric identifiers are acceptable when a treatment can be resolved by name.
 
 ## Metadata-to-file relationship
 
-Every included image has one corresponding row in `metadata/metadata.xlsx`.
+Every included image has one corresponding row in [`metadata/metadata.xlsx`](metadata/TPEN_metadata.xlsx).
+The compound reference is available as
+[`metadata/TPEN_compound_reference.xlsx`](metadata/TPEN_compound_reference.xlsx).
 
 ```text
 image file

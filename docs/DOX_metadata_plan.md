@@ -2,9 +2,7 @@
 
 The current metadata file is:
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/DOX_metadata.xlsx)
 
 This workbook contains one sheet, `Sheet1`, with 3,329 data rows. Each row
 represents one imaging file included in the curated database. The source
@@ -20,9 +18,7 @@ template:
 
 The numbered-compound lookup is distributed separately as:
 
-```text
-metadata/compound_plate_map.xlsx
-```
+[`metadata/compound_plate_map.xlsx`](metadata/DOX_compound_plate_map.xlsx)
 
 This plate map uses English-first delivery columns: `compound_number`,
 `compound_name_english`, `compound_name_chinese`, `cas_number`, and
@@ -64,7 +60,7 @@ in `mapping_status` rather than inferred.
 - Numbered screening names use compound-library number followed by fish or
   replicate number; for example, `350-1` denotes compound 350, replicate 1.
 - Numbered compound identities should be resolved against
-  `metadata/compound_plate_map.xlsx`.
+  [`metadata/compound_plate_map.xlsx`](metadata/DOX_compound_plate_map.xlsx).
 - Named treatments generally follow a treatment-dose-fish pattern.
 - `M-30-1-1` denotes model group, 30 h modeling, fish 1, extra view 1.
 - `C` and `Con` denote controls; `M` denotes the model group; `DXZ` and `YANG`

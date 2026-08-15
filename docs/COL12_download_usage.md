@@ -5,9 +5,7 @@ route. Replace placeholders only after the public repository is configured.
 
 ## Metadata workbook
 
-```text
-metadata/metadata.xlsx
-```
+[`metadata/metadata.xlsx`](metadata/COL12_metadata.xlsx)
 
 The workbook contains 13,933 records. For the image-only release, exclude the
 two rows with `plate_well_status=final_figure`, leaving 13,931 TIFF records.

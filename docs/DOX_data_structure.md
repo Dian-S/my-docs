@@ -24,6 +24,9 @@ The tree above describes the source archive. The curated database preserves
 the relative paths of included images but omits files covered by the exclusion
 rules below.
 
+Metadata downloads: [`metadata/metadata.xlsx`](metadata/DOX_metadata.xlsx) and
+[`metadata/compound_plate_map.xlsx`](metadata/DOX_compound_plate_map.xlsx).
+
 ## Section Summary
 
 | Section | Files | Approx. size | Description |
@@ -47,7 +50,7 @@ The main organizational unit is the experiment batch:
 4. Numeric suffixes generally distinguish individual fish or replicates. For
    numbered screening compounds, `350-1` means compound-library number 350,
    fish/replicate 1. The compound identity is resolved through
-   `metadata/compound_plate_map.xlsx`; in this example, compound 350 is
+   [`metadata/compound_plate_map.xlsx`](metadata/DOX_compound_plate_map.xlsx); in this example, compound 350 is
    cyanidin chloride.
 5. Named-treatment files generally follow a treatment-dose-fish pattern.
    `M-30-1-1` means model group, 30 h modeling, fish 1, extra view 1; the
