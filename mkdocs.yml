@@ -28,3 +28,25 @@ nav:
       - Download & Usage: COL12_download_usage.md
       - Article context: COL12_article_context.md
       - Citation: COL12_citation.md
+  - ROS:
+      - Overview: ROS_overview.md
+      - Data: ROS_data_structure.md
+      - Metadata: ROS_metadata_plan.md
+      - Workflow: ROS_scellseg_analysis_workflow.md
+      - Tools README: ROS_tools_README.md
+      - Download & Usage: ROS_download_usage.md
+      - Article context: ROS_article_context.md
+      - Citation: ROS_citation.md
+  - DOX:
+      - Overview: DOX_overview.md
+      - Data: DOX_data_structure.md
+      - Metadata: DOX_metadata_plan.md
+      - Workflow: DOX_cardiac_analysis_workflow.md
+      - Download & Usage: DOX_download_usage.md
+      - Article context: DOX_article_context.md
+      - Citation: DOX_citation.md
+  - TPEN:
+      - Overview: TPEN_overview.md
+      - Data: TPEN_data_structure.md
+      - Metadata: TPEN_metadata_plan.md
+      - Workflow: TPEN_hsc_counting_workflow.md
