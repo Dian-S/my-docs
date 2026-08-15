@@ -13,9 +13,10 @@ theme:
 
 # 目录结构配置
 nav:
-  - Overview: overview.md
-  - Data: data_structure.md
-  - Workflow: bodipy_sam_workflow.md
-  - Download & Usage: download_usage.md
-  - Article context: article_context.md
-  - Citation: citation.md
+  - Documentation:
+      - Overview: overview.md
+      - Data: data_structure.md
+      - Workflow: bodipy_sam_workflow.md
+      - Download & Usage: download_usage.md
+      - Article context: article_context.md
+      - Citation: citation.md
